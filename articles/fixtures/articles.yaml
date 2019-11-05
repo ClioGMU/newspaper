@@ -1,0 +1,21 @@
+- model: articles.article
+  pk: 1
+  fields:
+    title: My first article
+    body: This had better work.
+    date: 2019-10-08 18:54:23.681478+00:00
+    author: 2
+- model: articles.article
+  pk: 2
+  fields:
+    title: My cool article
+    body: Works as expected
+    date: 2019-10-08 18:57:12.149199+00:00
+    author: 1
+- model: articles.article
+  pk: 3
+  fields:
+    title: This is an article too
+    body: This is a supercool post.
+    date: 2019-11-05 01:50:16.589301+00:00
+    author: 2

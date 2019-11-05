@@ -1,0 +1,32 @@
+- model: users.customuser
+  pk: 1
+  fields:
+    password: pbkdf2_sha256$150000$V840fOqtU1bB$+WPv1apbmqPkF651TYhP36uDCiwghRCDKE4NGALh5aQ=
+    last_login: 2019-10-08 17:50:05.558726+00:00
+    is_superuser: false
+    username: bob
+    first_name: ''
+    last_name: ''
+    email: lmullen@gmu.edu
+    is_staff: false
+    is_active: true
+    date_joined: 2019-10-08 17:49:44.380625+00:00
+    age: 22
+    groups: []
+    user_permissions: []
+- model: users.customuser
+  pk: 2
+  fields:
+    password: pbkdf2_sha256$150000$0jGiCKt74V9b$ZYw+ZGy7owtHjtcpIk1oCn8l3668xwiYQ6CMIve0w9o=
+    last_login: 2019-11-05 01:39:45.880202+00:00
+    is_superuser: true
+    username: lmullen
+    first_name: ''
+    last_name: ''
+    email: lincoln@lincolnmullen.com
+    is_staff: true
+    is_active: true
+    date_joined: 2019-10-08 18:53:53.454460+00:00
+    age: null
+    groups: []
+    user_permissions: []
