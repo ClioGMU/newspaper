@@ -10,7 +10,10 @@
 </p>
 {% else %}
 <p>
-  You are not logged in. <a href="{% url 'login' %}">Log in</a> or <a href="{% url 'signup' %}">sign up</a>.
+  You are not logged in. <a href=" {% url 'login' %}">Log in</a> or <a href="{% url 'signup' %}">sign up</a>.
 </p>
 {% endif %}
+<p>
+  <a href="{% url 'article_list' %}">See the articles.</a>
+</p>
 {% endblock content %}
