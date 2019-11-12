@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "users.apps.UsersConfig",
     "pages.apps.PagesConfig",
     "articles.apps.ArticlesConfig",
+    "dataparser.apps.DataparserConfig",
 ]
 
 MIDDLEWARE = [
