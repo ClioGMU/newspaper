@@ -25,3 +25,13 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'{self.author.full_name()} on "{self.article}"'
+
+
+class Rebuttal(models.Model):
+    author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
+    date = models.DateTimeField(auto_now_add=True)
+    body = models.TextField()
+
+    def __str__(self):
+        return self.body[:25]
