@@ -13,6 +13,34 @@
 <body>
 
   <div class="container">
+    <nav>
+      {% block login %}
+      {% if user.is_authenticated %}
+      <p>
+        Hi {{ user.username }}!
+        <a href="{% url 'logout' %}">Log out</a>.
+      </p>
+      {% else %}
+      <p>
+        You are not logged in. <a href=" {% url 'login' %}">Log in</a> or <a href="{% url 'signup' %}">sign up</a>.
+      </p>
+      {% endif %}
+      {% endblock login %}
+      {% block nav %}
+      <p>
+        Oh the places you'll go:
+      </p>
+      <ul>
+        <li>
+          <a href="{% url 'home' %}">Home</a>
+        </li>
+        <li>
+          <a href="{% url 'article_list' %}">Article list</a>
+        </li>
+      </ul>
+      {% endblock nav %}
+
+    </nav>
     {% block content %}
     {% endblock content %}
   </div>
