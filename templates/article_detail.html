@@ -24,7 +24,7 @@
     {% endfor %}
 
     <div class="card-footer text-center text-muted">
-        <a href="#">Edit</a> | <a href="#">Delete</a>
+        <a href="{% url 'article_edit' article.pk %}">Edit</a> | <a href="#">Delete</a>
         {% if user.is_authenticated %} | <a href="{% url 'article_rebuttal' article.pk %}">Rebuttals</a>{% endif %}
     </div>
 </div>
