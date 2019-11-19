@@ -5,6 +5,9 @@
 <form action="" method="post">
   {% csrf_token %}
   {{ form.as_p }}
+  <hr>
+  <p>Add some comments:</p>
+  {{ comment_formset.as_p }}
   <input type="submit" value="Publish article" />
 </form>
 {% endblock content %}
