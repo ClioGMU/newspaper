@@ -14,13 +14,17 @@ class ArticleDetailView(DetailView):
     template_name = "article_detail.html"
 
 
-class ArticleCreateView(CreateView):
+class ArticleCreateView(LoginRequiredMixin, CreateView):
     model = Article
     template_name = "article_new.html"
-    fields = ["title", "body", "author"]
+    fields = ["title", "body"]
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
-class ArticleUpdateView(UpdateView):
+class ArticleUpdateView(LoginRequiredMixin, UpdateView):
     model = Article
     template_name = "article_edit.html"
     fields = ["title", "body"]
